@@ -1,0 +1,147 @@
+<link rel="import" href="../paper-tabs/paper-tabs.html">
+<link rel="import" href="../paper-tabs/paper-tab.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../paper-slider/paper-slider.html">
+<link rel="import" href="../core-icons/core-icons.html">
+<link rel="import" href="../core-icons/av-icons.html">
+<link rel="import" href="../paper-fab/paper-fab.html">
+
+<polymer-element name="my-element">
+
+  <template>
+    <style>
+      :host {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      #paper_fab {
+        left: 345px;
+        top: 497px;
+        position: absolute;
+      }
+      #section {
+        width: 420px;
+        height: 630px;
+        border: 5px solid rgb(204, 204, 204);
+        left: 340px;
+        top: 0px;
+        position: absolute;
+      }
+      #paper_tabs {
+        color: rgb(255, 255, 255);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px;
+        background-color: rgb(0, 188, 212);
+      }
+      #paper_input {
+        left: 45px;
+        top: 97px;
+        position: absolute;
+      }
+      #paper_input1 {
+        left: 235px;
+        top: 97px;
+        position: absolute;
+      }
+      #paper_button {
+        left: 178px;
+        top: 187px;
+        position: absolute;
+      }
+      #paper_button1 {
+        left: 348px;
+        top: 187px;
+        position: absolute;
+      }
+      #paper_input2 {
+        left: 235px;
+        top: 27px;
+        position: absolute;
+      }
+      #paper_input3 {
+        left: 45px;
+        top: 167px;
+        position: absolute;
+      }
+      #paper_slider {
+        left: 45px;
+        top: 237px;
+        position: absolute;
+        width: 340px;
+        height: 30px;
+      }
+      #paper_checkbox {
+        left: 45px;
+        top: 277px;
+        position: absolute;
+      }
+      #paper_input4 {
+        left: 55px;
+        top: 327px;
+        position: absolute;
+      }
+      #paper_input5 {
+        left: 55px;
+        top: 377px;
+        position: absolute;
+      }
+      #paper_input6 {
+        left: 55px;
+        top: 427px;
+        position: absolute;
+      }
+      #paper_slider1 {
+        left: 55px;
+        top: 497px;
+        position: absolute;
+        width: 70px;
+        height: 30px;
+      }
+      #paper_fab1 {
+        left: 215px;
+        top: 307px;
+        position: absolute;
+      }
+      #paper_fab2 {
+        left: 275px;
+        top: 307px;
+        position: absolute;
+      }
+    </style>
+    <section id="section" layout vertical>
+      <paper-tabs noink nobar selected="1" selectedindex="1" id="paper_tabs" horizontal center layout>
+        <paper-tab id="paper_tab" inline flex center-center horizontal layout>SINGLE</paper-tab>
+        <paper-tab id="paper_tab1" inline flex center-center horizontal layout active>GROUP</paper-tab>
+      </paper-tabs>
+      <section id="section1" flex relative>
+        <paper-button id="paper_button">-</paper-button>
+        <paper-button id="paper_button1">+</paper-button>
+        <paper-input label="Month" floatinglabel value="Jan 2015" id="paper_input2"></paper-input>
+        <paper-input label="Days" floatinglabel value="2" id="paper_input1"></paper-input>
+        <paper-input label="Date From" floatinglabel value="01/01/.2015" id="paper_input"></paper-input>
+        <paper-input label="Location" floatinglabel value="London" id="paper_input3"></paper-input>
+        <paper-checkbox checked label="Similar Hotels" id="paper_checkbox"></paper-checkbox>
+        <paper-input label="Name" floatinglabel value="Jane Smith" id="paper_input4"></paper-input>
+        <paper-input label="Email" floatinglabel value="jane.smith@acme.com" id="paper_input5"></paper-input>
+        <paper-input label="Telephone Number" floatinglabel value="0044 (0)1736 732324" id="paper_input6"></paper-input>
+        <paper-slider snaps maxmarkers="1" max="1" id="paper_slider1"></paper-slider>
+        <paper-slider value="69" id="paper_slider"></paper-slider>
+        <paper-fab icon="av:play-arrow" id="paper_fab"></paper-fab>
+        <paper-fab icon="account-box" id="paper_fab1"></paper-fab>
+        <paper-fab icon="account-box" id="paper_fab2"></paper-fab>
+      </section>
+    </section>
+  </template>
+
+  <script>
+
+    Polymer({
+
+    });
+
+  </script>
+
+</polymer-element>
