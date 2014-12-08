@@ -1,6 +1,9 @@
+
 <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
 <link rel="import" href="bower_components/paper-input/paper-input.html">
+<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="bower_components/paper-slider/paper-slider.html">
 
 <polymer-element name="my-element">
 
@@ -11,6 +14,7 @@
         width: 100%;
         height: 100%;
         box-sizing: border-box;
+        font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
       #paper_tabs {
         width: 480px;
@@ -29,11 +33,28 @@
         height: 40px;
       }
     </style>
-    <paper-tabs selected="0" selectedindex="0" id="paper_tabs" horizontal center layout>
-      <paper-tab id="paper_tab" inline flex center-center horizontal layout active>SINGLE BOOKING</paper-tab>
-      <paper-tab id="paper_tab1" inline flex center-center horizontal layout>GROUP BOOKING</paper-tab>
-    </paper-tabs>
-    <paper-input label="Name..." floatinglabel id="paper_input"></paper-input>
+
+    <section class="tabs">
+      <paper-tabs selected="0" selectedindex="0" id="paper_tabs" horizontal center layout>
+        <paper-tab id="paper_tab" inline flex center-center horizontal layout active>SINGLE BOOKING</paper-tab>
+        <paper-tab id="paper_tab1" inline flex center-center horizontal layout>GROUP BOOKING</paper-tab>
+      </paper-tabs>
+    </section>
+
+    <section class="fields">
+      <paper-input label="Nights" floatinglabel id="nights"></paper-input><br>
+      <paper-input label="Location" floatinglabel id="location"></paper-input><br>
+      <paper-input label="Number of Guests" floatinglabel id="guests"></paper-input>
+    </section>
+
+    <section class="budget-slider">
+        <div>
+          <span>Budget</span><span id="budgetLabel"></span>
+        </div>
+        <br>
+        <paper-slider id="budget" pin snaps max="100000" step="10000" value="5000" editable></paper-slider>
+    </section>
+
   </template>
 
   <script>
