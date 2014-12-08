@@ -34,12 +34,19 @@
       }
     </style>
 
-    <section class="tabs">
+
+    <core-header-panel>
+
+    <core-toolbar>
       <paper-tabs selected="0" selectedindex="0" id="paper_tabs" horizontal center layout>
         <paper-tab id="paper_tab" inline flex center-center horizontal layout active>SINGLE BOOKING</paper-tab>
         <paper-tab id="paper_tab1" inline flex center-center horizontal layout>GROUP BOOKING</paper-tab>
       </paper-tabs>
-    </section>
+    </core-toolbar>
+
+    <!-- main page content will go here -->
+
+    </core-header-panel>
 
     <section class="fields">
       <paper-input label="Nights" floatinglabel id="nights"></paper-input><br>
@@ -60,7 +67,7 @@
   <script>
 
     Polymer({
-      
+
     });
 
   </script>
