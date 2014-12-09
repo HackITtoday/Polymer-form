@@ -1,4 +1,8 @@
 
+<style type="text/css">
+  #paper_tabs {
+  }
+</style>
 <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
 <link rel="import" href="bower_components/paper-input/paper-input.html">
@@ -25,13 +29,6 @@
         position: absolute;
         background-color: rgb(0, 188, 212);
       }
-      #paper_input {
-        left: 120px;
-        top: 150px;
-        position: absolute;
-        width: 230px;
-        height: 40px;
-      }
     </style>
 
 
@@ -39,7 +36,7 @@
 
       <core-toolbar>
         <paper-tabs selected="0" selectedindex="0" id="paper_tabs" horizontal center layout>
-          <paper-tab id="paper_tab" inline flex center-center horizontal layout active>SINGLE BOOKING</paper-tab>
+          <paper-tab id="paper_tab" inline flex center-center horizontal layout >SINGLE BOOKING</paper-tab>
           <paper-tab id="paper_tab1" inline flex center-center horizontal layout>GROUP BOOKING</paper-tab>
         </paper-tabs>
       </core-toolbar>
