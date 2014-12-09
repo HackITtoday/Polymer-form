@@ -9,13 +9,56 @@
           content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <script src="bower_components/webcomponentsjs/webcomponents.js">
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script  src="src/angular-pageslide-directive.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/foundation/5.0.0/css/foundation.min.css">
+
 
     <link rel="import" href="bower_components/core-dropdown/core-dropdown.html">
     <link rel="import" href="bower_components/core-dropdown/core-dropdown.html">
     <link rel="import" href="designer.html">
-</head>
-<body unresolved>
 
-<my-element></my-element>
+    <!--Angular Page Slide Code-->
+    <style>
+        .ng-pageslide {
+            background: #eee;
+        }
+    </style>
+    <script>
+        var app = angular.module("app", ["pageslide-directive"]);
+
+        app.controller('pageslideCtrl',['$scope',function($scope){
+
+            $scope.checked; // This will be binded using the ps-open attribute
+
+        }]);
+
+        angular.element(document).ready(function(){
+
+            c = angular.element(document.querySelector('#controller-demo')).scope();
+        });
+
+        // Test
+        angular.element(document).ready(function () {
+            if (console.assert)
+                console.assert(document.querySelectorAll('body > .ng-pageslide').length == 9, 'Made all of them')
+        });
+    </script>
+</head>
+
+
+<body ng-app="app" unresolved>
+
+<section id="main_content" class="inner">
+
+    <a  class="tiny button" pageslide="top" ps-speed="0.5" href="#demo-top">Up up and above</a>
+
+    <div style="padding:20px" id="demo-top">
+        <my-element></my-element>
+        <a id="demo-top-close" class="button" >Close</a>
+
 </body>
+
+
+
 </html>
