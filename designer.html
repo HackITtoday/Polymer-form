@@ -8,7 +8,7 @@
 <polymer-element name="my-element">
 
   <template>
-    <style>    
+    <style>
       :host {
         position: absolute;
         width: 100%;
@@ -37,14 +37,14 @@
 
     <core-header-panel>
 
-    <core-toolbar>
-      <paper-tabs selected="0" selectedindex="0" id="paper_tabs" horizontal center layout>
-        <paper-tab id="paper_tab" inline flex center-center horizontal layout active>SINGLE BOOKING</paper-tab>
-        <paper-tab id="paper_tab1" inline flex center-center horizontal layout>GROUP BOOKING</paper-tab>
-      </paper-tabs>
-    </core-toolbar>
+      <core-toolbar>
+        <paper-tabs selected="0" selectedindex="0" id="paper_tabs" horizontal center layout>
+          <paper-tab id="paper_tab" inline flex center-center horizontal layout active>SINGLE BOOKING</paper-tab>
+          <paper-tab id="paper_tab1" inline flex center-center horizontal layout>GROUP BOOKING</paper-tab>
+        </paper-tabs>
+      </core-toolbar>
 
-    <!-- main page content will go here -->
+      <!-- main page content will go here -->
 
     </core-header-panel>
 
@@ -55,11 +55,18 @@
     </section>
 
     <section class="budget-slider">
-        <div>
-          <span>Budget</span><span id="budgetLabel"></span>
-        </div>
-        <br>
-        <paper-slider id="budget" pin snaps max="100000" step="10000" value="5000" editable></paper-slider>
+      <div>
+        <span>Budget</span><span id="budgetLabel"></span>
+      </div>
+      <br>
+      <paper-slider id="budget" pin snaps max="100000" step="10000" value="5000" editable></paper-slider>
+    </section>
+
+    <section class="contact">
+      <paper-input label="Name" floatinglabel id="name"></paper-input><br>
+      <paper-input label="Email" floatinglabel id="email"></paper-input><br>
+      <paper-input label="Telephone" floatinglabel id="telephone"></paper-input>
+
     </section>
 
   </template>
