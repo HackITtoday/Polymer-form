@@ -1,13 +1,9 @@
-
-<style type="text/css">
-  #paper_tabs {
-  }
-</style>
 <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
 <link rel="import" href="bower_components/paper-input/paper-input.html">
 <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
 <link rel="import" href="bower_components/paper-slider/paper-slider.html">
+<link rel="import" href="bower_components/paper-fab/paper-fab.html">
 
 <polymer-element name="my-element">
 
@@ -20,23 +16,8 @@
         box-sizing: border-box;
         font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
-      #paper_tabs {
-        width: 480px;
-        color: rgb(255, 255, 255);
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px;
-        left: 120px;
-        top: 80px;
-        position: absolute;
-        background-color: rgb(0, 188, 212);
-      }
-    </style>
 
-    <section class-tabs>
-        <paper-tabs selected="0" selectedindex="0" id="paper_tabs" horizontal center layout>
-          <paper-tab id="paper_tab" inline flex center-center horizontal layout >SINGLE BOOKING</paper-tab>
-          <paper-tab id="paper_tab1" inline flex center-center horizontal layout>GROUP BOOKING</paper-tab>
-        </paper-tabs>
-    </section>
+    </style>
 
     <section class="fields">
       <paper-input label="Nights" floatinglabel id="nights"></paper-input><br>
@@ -44,20 +25,12 @@
       <paper-input label="Number of Guests" floatinglabel id="guests"></paper-input>
     </section>
 
-    <section class="budget-slider">
-      <div>
-        <span>Budget</span><span id="budgetLabel"></span>
-      </div>
-      <br>
-      <paper-slider id="budget" pin snaps max="100000" step="5000" value="5000" editable></paper-slider>
-    </section>
-
     <section class="contact">
       <paper-input label="Name" floatinglabel id="name"></paper-input><br>
       <paper-input label="Email" floatinglabel id="email"></paper-input><br>
       <paper-input label="Telephone" floatinglabel id="telephone"></paper-input>
-
     </section>
+
 
   </template>
 
