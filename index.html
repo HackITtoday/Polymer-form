@@ -31,10 +31,18 @@
         .ng-pageslide {
             background: #eee;
         }
-        #demo-top {
-            bottom:50px;
+        #demo-top-close {
             padding:0;
         }
+
+        /*html /deep/ paper-button   {*/
+            /*margin:  24em 11.29em;*/
+        /*}*/
+
+        .submit {
+            margin: 24em 11.29em;
+        }
+
     </style>
     <script>
         var app = angular.module("app", ["pageslide-directive"]);
@@ -69,8 +77,12 @@
     </paper-button>
 
     <div id="demo-top">
-        <my-element></my-element>
-        <paper-button raised><a id="demo-top-close" >Submit</a></paper-button>
+        <div class="myelement" style="margin:20px";>
+            <my-element></my-element>
+        </div>
+        <div class="demo">
+            <paper-button raised class="submit"><a id="demo-top-close" >Submit</a></paper-button>
+        </div>
     </div>
 
 </section>
