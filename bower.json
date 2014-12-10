@@ -1,19 +1,20 @@
 {
-  "name": "Polymer-form",
-  "version": "0.0.0",
-  "homepage": "https://github.com/HackITtoday/Polymer-form",
+  "name": "angular-pageslide-directive",
+  "version": "0.1.7",
+  "main": "dist/angular-pageslide-directive.js",
   "authors": [
-    "marcus hitchins <marcus7777@gmail.com>"
+    "Wo King <mywoisme@gmail.com>",
+    "Marcus Hitchens <marcus7777@gmail.com>"
   ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dpiccone/ng-pageslide.git"
+  },
   "dependencies": {
+    "angular": "~1.2.23"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.23"
     "paper-input": "Polymer/paper-input#~0.5.1",
     "paper-tabs": "Polymer/paper-tabs#~0.5.1",
     "webcomponentsjs": "~0.5.1"
