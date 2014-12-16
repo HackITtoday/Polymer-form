@@ -5,8 +5,14 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="1">
-            <item index="0" class="java.lang.String" itemvalue="raised" />
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="locale" />
+            <item index="1" class="java.lang.String" itemvalue="paper-form" />
+            <item index="2" class="java.lang.String" itemvalue="paper-datepicker" />
+            <item index="3" class="java.lang.String" itemvalue="floatinglabel" />
+            <item index="4" class="java.lang.String" itemvalue="id" />
+            <item index="5" class="java.lang.String" itemvalue="label" />
+            <item index="6" class="java.lang.String" itemvalue="ps-speed" />
           </list>
         </value>
       </option>
