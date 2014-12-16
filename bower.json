@@ -16,7 +16,8 @@
     "paper-input": "Polymer/paper-input#~0.5.1",
     "paper-tabs": "Polymer/paper-tabs#~0.5.1",
     "webcomponentsjs": "~0.5.1",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "paper-datepicker": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.23"
