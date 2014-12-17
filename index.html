@@ -21,33 +21,19 @@
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-fab/paper-fab.html">
 
-    
-
     <!--Angular Page Slide Code-->
         <style>
-            .ng-pageslide {
-                background: #eee;
-            }
-            #demo-top-close {
-                padding:0;
-            }
-
-            .submit {
-                margin: 28em 12.29em;
-            }
-
+            .ng-pageslide { background: #eee; }
+            #demo-top-close { padding:0; } 
+            .submit { margin: 28em 12.29em; }
         </style>
         <script>
             var app = angular.module("app", ["pageslide-directive"]);
-
             app.controller('pageslideCtrl',['$scope',function($scope){
-
                 $scope.checked; // This will be binded using the ps-open attribute
-
             }]);
 
             angular.element(document).ready(function(){
-
                 c = angular.element(document.querySelector('#controller-demo')).scope();
             });
 
@@ -63,7 +49,6 @@
 <body ng-app="app" unresolved>
 
 <section id="main_content" class="inner">
-
     <!--Booking Enquiry Button-->
     <paper-button pageslide="left" ps-speed="0.5" href="#demo-top" raised>
             Booking Enquiry
@@ -82,7 +67,5 @@
     </div>
 
 </section>
-
 </body>
-
 </html>

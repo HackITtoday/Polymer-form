@@ -6,7 +6,21 @@ bower init
 
 bower install --save paper-datepicker
 
-cp bower_components/paper-datepicker/demo.html ./index.html
+##How to Use
+copy the file
+
+bower_components/paper-datepicker/demo.html
+to
+index.html
+...so you have a working file. 
+
+Or just add the tag 
+<paper-datepicker></paper-datepicker>
+...where you want the date picker button to be
+
+then add the link to the file
+<link rel="import" href="bower_components/paper-datepicker/paper-datepicker.html">
+
 
 While you’re working, you’ll need a basic HTTP server to serve your pages. If you have Python installed, you can run one of the following commands in the top level of the starter project.
 
