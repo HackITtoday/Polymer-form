@@ -7,7 +7,7 @@
 <link rel="import" href="bower_components/paper-fab/paper-fab.html">
 <link rel="import" href="bower_components/core-ajax/core-ajax.html">
 <link rel="import" href="bower_components/paper-input/paper-input-decorator.html">
-
+<link rel="import" href="bower_components/firebase/firebase.js">
 
 <polymer-element name="polymer-form">
 
@@ -24,7 +24,7 @@
     </style>
 
     <section class="date-button">
-      <paper-datepicker locale="en-gb"></paper-datepicker>
+      <paper-datepicker datepicked="{{data_date}}" locale="en-gb"></paper-datepicker>
     </section>
 
     <section class="fields">
