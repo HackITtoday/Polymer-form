@@ -8,6 +8,7 @@
 <link rel="import" href="bower_components/core-ajax/core-ajax.html">
 <link rel="import" href="bower_components/paper-input/paper-input-decorator.html">
 <link rel="import" href="bower_components/firebase/firebase.js">
+<link rel="import" href="bower_components/firebase-element/firebase-element.html">
 
 <polymer-element name="polymer-form">
 
@@ -38,13 +39,28 @@
       <paper-input label="Email" value="{{data_email}}" floatinglabel id="email"></paper-input><br>
       <paper-input label="Telephone" value="{{data_phone}}" floatinglabel id="telephone"></paper-input>
     </section>
+<template if="{{data_name}}">
+  <p>Done</p>
+  <paper-fab tap="save({{data_name}})"></paper-fab>
+</template>
+
+    <firebase-element id="base" location="https://dazzling-fire-4274.firebaseio.com/" data="{{data}}" keys="{{keys}}"></firebase-element>
+
+<template repeat="{{key in keys}}">
+  <p>{{key}}: {{data[key]}}</p>
+</template>
 
   </template>
 
   <script>
-
+   
     Polymer({
-
+      save: function() {
+        save(this);
+      },
+      addEntry: function(value) {
+        this.$.base.push({save: value});
+      }
     });
 
   </script>

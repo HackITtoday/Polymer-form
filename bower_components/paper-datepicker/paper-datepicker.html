@@ -4,6 +4,7 @@
 <link rel="import" href="../paper-button/paper-button.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../core-icons/core-icons.html">
+<link rel="import" href="../font-roboto/roboto.html">
 
 <polymer-element name="paper-datepicker" attributes="datePicked formatDate locale orientatation">
     <style shim-shadowdom>
@@ -76,7 +77,7 @@
         color:#fff; background:#009688; border-radius: 18px;
       }
       html /deep/ paper-action-dialog .days span {
-        min-height:20px;width:37px;display:inline-block;text-align:center;line-height:37px;cursor:pointer
+        min-height:20px;width:36px;display:inline-block;text-align:center;line-height:37px;cursor:pointer
       }
       html /deep/ paper-action-dialog .days span.not-day {
         cursor:default
@@ -88,7 +89,8 @@
         color: #009688; padding: 10px; min-width: 39px;
       }
       html /deep/ paper-action-dialog {
-        font-family: RobotoDraft, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "RobotoDraft","Roboto",sans-serif;
+        -webkit-font-smoothing: antialiased;
       }
       html /deep/ #actions { padding: 0; }
     </style>

@@ -18,11 +18,11 @@
     "core-icon": "Polymer/core-icon#~0.5.1",
     "paper-ripple": "Polymer/paper-ripple#~0.5.1"
   },
-  "_release": "02a8aab758",
+  "_release": "5bad92f618",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "02a8aab7589c7381294509f7f2ffdbb0879e73dc"
+    "commit": "5bad92f618c611970f83110081678f6b0966b23f"
   },
   "_source": "git://github.com/HackITtoday/paper-datepicker.git",
   "_target": "*",
