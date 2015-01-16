@@ -7,10 +7,8 @@
 <link rel="import" href="bower_components/paper-fab/paper-fab.html">
 <link rel="import" href="bower_components/core-ajax/core-ajax.html">
 <link rel="import" href="bower_components/paper-input/paper-input-decorator.html">
-<link rel="import" href="bower_components/firebase/firebase.js">
-<link rel="import" href="bower_components/firebase-element/firebase-element.html">
 
-<polymer-element name="polymer-form">
+<polymer-element name="polymer-form" attributes="data">
 
   <template>
     <style>
@@ -21,48 +19,25 @@
         box-sizing: border-box;
         font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
-
     </style>
-
+    
     <section class="date-button">
-      <paper-datepicker datepicked="{{data_date}}" locale="en-gb"></paper-datepicker>
+      <paper-datepicker datepicked="{{data[date]}}" locale="en-gb"></paper-datepicker>
     </section>
-
     <section class="fields">
-
-      <paper-input label="Nights" value="{{data_nights}}" floatinglabel id="nights"></paper-input><br>
-      <paper-input label="Number of Guests" value="{{data_guests}}" floatinglabel id="guests"></paper-input>
+      <paper-input label="Nights" value="{{data[nights]}}" floatinglabel id="nights"></paper-input><br>
+      <paper-input label="Number of Guests" value="{{data[guests]}}" floatinglabel id="guests"></paper-input>
     </section>
-
     <section class="contact">
-      <paper-input label="Name" value="{{data_name}}" floatinglabel id="name"></paper-input><br>
-      <paper-input label="Email" value="{{data_email}}" floatinglabel id="email"></paper-input><br>
-      <paper-input label="Telephone" value="{{data_phone}}" floatinglabel id="telephone"></paper-input>
+      <paper-input label="Name" value="{{data[name]}}" floatinglabel id="name"></paper-input><br>
+      <paper-input label="Email" value="{{data[email]}}" floatinglabel id="email"></paper-input><br>
+      <paper-input label="Telephone" value="{{data[phone]}}" floatinglabel id="telephone"></paper-input>
     </section>
-<template if="{{data_name}}">
-  <p>Done</p>
-  <paper-fab tap="save({{data_name}})"></paper-fab>
-</template>
-
-    <firebase-element id="base" location="https://dazzling-fire-4274.firebaseio.com/" data="{{data}}" keys="{{keys}}"></firebase-element>
-
-<template repeat="{{key in keys}}">
-  <p>{{key}}: {{data[key]}}</p>
-</template>
-
   </template>
 
   <script>
-   
     Polymer({
-      save: function() {
-        save(this);
-      },
-      addEntry: function(value) {
-        this.$.base.push({save: value});
-      }
+
     });
-
   </script>
-
 </polymer-element>
