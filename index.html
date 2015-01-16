@@ -4,9 +4,10 @@
 
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/font-roboto/roboto.html"></script>
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
@@ -42,24 +43,23 @@
 </head>
 
 <body ng-app="app" unresolved>
-
-<section id="main_content" class="inner">
+  <section id="main_content" class="inner">
     <!--Booking Enquiry Button-->
     <paper-button pageslide="left" ps-speed="0.5" href="#demo-top" raised>
-            Booking Enquiry
-        <core-icon icon="event" role="img">
-        </core-icon>
+      Booking Enquiry
+      <core-icon icon="event" role="img"></core-icon>
     </paper-button>
 
     <!--Slider with Polymer Form HTML form and Submit Button-->
     <div id="demo-top">
-        <div class="polymerform" style="margin:20px">
-            <polymer-form></polymer-form>
-        </div>
-        <div class="demo">
-            <paper-button raised class="submit" id="demo-top-close">Submit</paper-button>
-        </div>
+      <div class="polymerform" style="margin:20px">
+        <polymer-form data="{{data}}"></polymer-form>
+      </div>
+      <div class="demo">
+        <paper-button raised class="submit" id="demo-top-close">Submit</paper-button>
+      </div>
     </div>
-</section>
+  </section>
 </body>
+
 </html>
